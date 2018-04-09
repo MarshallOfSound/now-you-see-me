@@ -1,0 +1,35 @@
+{
+  "name": "now-you-see-me",
+  "version": "0.0.1",
+  "description": "Stenography for the browser",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "lint": "tslint src/**/*.ts test/**/*.ts",
+    "mocha": "electron-mocha --renderer --require ts-node/register test/*_spec.ts",
+    "test": "npm run lint && npm run mocha"
+  },
+  "keywords": [
+    "prune",
+    "production"
+  ],
+  "author": "Samuel Attard",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.0.10",
+    "@types/debug": "^0.0.30",
+    "@types/fs-extra": "^5.0.0",
+    "@types/mocha": "^2.2.45",
+    "@types/tempy": "^0.1.0",
+    "chai": "^4.1.2",
+    "electron-mocha": "^6.0.1",
+    "fs-extra": "^5.0.0",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "debug": "^3.1.0"
+  }
+}
